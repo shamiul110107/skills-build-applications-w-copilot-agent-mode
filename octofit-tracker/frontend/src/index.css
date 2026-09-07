@@ -1,0 +1,11 @@
+:root {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #173f3a;
+  background: #f8f5ef;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body { min-width: 320px; margin: 0; }
+button, input, textarea, select { font: inherit; }
