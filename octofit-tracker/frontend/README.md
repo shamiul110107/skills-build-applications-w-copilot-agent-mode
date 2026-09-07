@@ -1,4 +1,26 @@
-# React + Vite
+# OctoFit Tracker frontend
+
+The presentation tier uses React 19, React Router, Bootstrap, and Vite.
+
+## API configuration
+
+Define `VITE_CODESPACE_NAME` in `octofit-tracker/frontend/.env.local` when running
+the frontend in GitHub Codespaces:
+
+```env
+VITE_CODESPACE_NAME=your-codespace-name
+```
+
+The app then requests `https://${VITE_CODESPACE_NAME}-8000.app.github.dev/api/.../`.
+When the variable is unset, it safely falls back to `http://localhost:8000/api`.
+
+## Development
+
+```bash
+npm run dev -- --host 0.0.0.0 --port 5173
+```
+
+Open port `5173` in the forwarded ports panel.
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
