@@ -5,7 +5,7 @@ import { connectDatabase } from './config/database.js';
 import { activityRoutes, leaderboardRoutes, teamRoutes, userRoutes, workoutRoutes } from './routes/index.js';
 
 const app = express();
-const port = Number(process.env.PORT || 8000);
+const port = 8000;
 
 app.use(cors());
 app.use(express.json());
@@ -22,7 +22,7 @@ app.get('/api/health', (_request, response) => {
 
 connectDatabase()
   .then(() => {
-    app.listen(port, () => {
+    app.listen(port, '0.0.0.0', () => {
       const codespaceName = process.env.CODESPACE_NAME;
       const apiUrl = codespaceName
         ? `https://${codespaceName}-8000.app.github.dev`
